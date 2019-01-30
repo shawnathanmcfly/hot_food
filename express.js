@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-// Star Wars Characters (DATA)
+// Guest (DATA)
 // =============================================================
 var guests = [
     {
@@ -43,7 +43,7 @@ var guests = [
     return res.json(guests);
   });
   
-  // Displays a single character, or returns false
+  // Displays a single guest, or returns false
   app.get("/api/guests/:guest", function(req, res) {
     var chosen = req.params.guest;
   
@@ -58,21 +58,21 @@ var guests = [
     return res.json(false);
   });
   
-  // Create New Characters - takes in JSON input
+  // Create New Guests - takes in JSON input
   app.post("/api/guests", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
-    var newguest = req.body;
+    var newGuest = req.body;
   
-    // Using a RegEx Pattern to remove spaces from newCharacter
+    // Using a RegEx Pattern to remove spaces from newguest
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newguest.routeName = newguest.name.replace(/\s+/g, "").toLowerCase();
+    newGuest.routeName = newGuest.name.replace(/\s+/g, "").toLowerCase();
   
-    console.log(newguest);
+    console.log(newGuest);
   
-    guests.push(newguest);
+    guests.push(newGuest);
   
-    res.json(newguest);
+    res.json(newGuest);
   });
   
   // Starts the server to begin listening
