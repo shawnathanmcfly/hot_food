@@ -37,6 +37,19 @@ var guests = [
   app.get("/add", function(req, res) {
     res.sendFile(path.join(__dirname, "add.html"));
   });
+
+  app.get('/get', function (req, res) {
+    
+    response = {
+       name:req.query.name,
+       phone:req.query.phonenumber,
+       email:req.query.email,
+       uid:req.query.uid
+
+    };
+    console.log(response);
+    res.end(JSON.stringify(response));
+ });
   
   // Displays all guests
   app.get("/api/guests", function(req, res) {
