@@ -3,7 +3,7 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var mysql = require("mysql");
+//var mysql = require("mysql");
 var path = require("path"); 
 
 // Sets up the Express App
