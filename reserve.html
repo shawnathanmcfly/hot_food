@@ -10,9 +10,20 @@
   <body>
   
     <div class="container">
+        <div class = 'row'> 
+            <div class="col-lg-12">
+                <div class="jumbotron">
+                    <h2 class="display-12">Hot Food Restaurant</h2>
+                    <p class="lead">Welcome to our Reservation page.  We only have 5 tables.</p>
+                    <hr class="my-1">
+                    <a id = "playButton" class="btn btn-primary btn-lg"  href="#" role="button">Make a Reservation</a> 
+                    <a id = "Tables"  class="btn btn-primary btn-lg"  href="#" role="button">Tables Page</a>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-6">
-                <form action = "/get" method = "GET"> <!-- TODO: insert addess for action -->
+                <form action = "http://127.0.0.1:8081/get" method = "GET"> <!-- TODO: insert addess for action -->
                     <div class="form-group">
                       <label for="name">Name</label>
                       <input id="name" class="form-control" name="name">

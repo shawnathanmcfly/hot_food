@@ -3,6 +3,7 @@
 // Dependencies
 // =============================================================
 var express = require("express");
+var mysql = require("mysql");
 var path = require("path"); 
 
 // Sets up the Express App
@@ -45,8 +46,8 @@ var guests = [
        phone:req.query.phonenumber,
        email:req.query.email,
        uid:req.query.uid
-
     };
+
     console.log(response);
     res.end(JSON.stringify(response));
  });

@@ -1,4 +1,6 @@
 {
+  "start": "node index.js",
+  "heroku-postbuild": "npm install mysql",
   "name": "hot_food",
   "version": "1.0.0",
   "description": "",
