@@ -1,6 +1,6 @@
 {
   "start": "node express.js",
-  "heroku-postbuild": "npm install mysql",
+  "heroku-prebuild": "npm install express",
   "name": "hot_food",
   "version": "1.0.0",
   "description": "",
