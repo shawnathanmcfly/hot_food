@@ -6,7 +6,7 @@
   "main": "constructor.js",
   "scripts": {
     "start": "node express.js",
-    "heroku-postbuild": "npm install express",
+    "heroku-postbuild": "npm install express && npm install mysql --save",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
